@@ -23,7 +23,7 @@ std::string FileLoggingPolicy::getNextLogFileFullPath(const fs::path& logsDir, c
 {
     std::vector<std::string> fileNames;
     for(auto& entryInLogsDir : fs::directory_iterator(logsDir))
-        fileNames.push_back(entryInLogsDir.path().filename());
+        fileNames.push_back(entryInLogsDir.path().filename().u8string());
 
     std::vector<std::string> logFileNames;
     std::copy_if(fileNames.cbegin(), fileNames.cend(), std::back_inserter(logFileNames),
