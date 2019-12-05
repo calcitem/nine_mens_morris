@@ -28,8 +28,7 @@ QMAKE_CXXFLAGS += \
             -Werror
 
 LIBS += \
-        -lstdc++fs \
-        -lprofiler
+        -lstdc++fs
 
 SOURCES += \
         src/model/communication/Action.cpp \
